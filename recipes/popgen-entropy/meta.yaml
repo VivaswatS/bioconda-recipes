@@ -10,6 +10,8 @@ source:
 
 build:
   number: 10 
+  run_exports:
+    - {{ pin_subpackage('popgen-entropy', max_pin="2") }}
 
 requirements:
   build:
@@ -42,3 +44,6 @@ extra:
   identifiers:
       - biotools:popgen-entropy
       - doi:10.1101/2020.07.31.231514
+  additional-platforms:
+      - osx-arm64
+      - linux-aarch64
